@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuisinier - Your Personal Cooking Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light py-3 sticky-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">Cuisinier</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#how-it-works">How It Works</a>
+                    </li>
+                </ul>
+                <button class="btn btn-ios ms-3 d-none d-lg-block" onclick="showAppSection()">Start Cooking</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="display-3 fw-bold text-white mb-4">Turn Ingredients into Delicious Meals</h1>
+                    <p class="lead text-white mb-5">Cuisinier helps you discover recipes based on what's already in your kitchen. Save time, reduce waste, and enjoy cooking again!</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <button class="btn btn-ios" onclick="showAppSection()">Start Cooking Now</button>
+                        <button class="btn btn-ios-outline text-white border-white" data-bs-toggle="modal" data-bs-target="#signupModal">Create Account</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="app-screen floating">
+                        <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3" class="img-fluid" alt="App Preview">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container py-5">
+            <h2 class="section-title">Amazing Features</h2>
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="ios-card h-100 p-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Ingredient Finder</h4>
+                        <p>Enter what you have in your pantry and fridge, and we'll find recipes that match your ingredients.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="ios-card h-100 p-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Personalized Recipes</h4>
+                        <p>Get recommendations based on your dietary preferences, cooking skills, and favorite cuisines.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="ios-card h-100 p-4 text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h4 class="fw-bold mb-3">Smart Shopping</h4>
+                        <p>Generate shopping lists for missing ingredients and save money by reducing food waste.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-5 bg-light">
+        <div class="container py-5">
+            <h2 class="section-title">How Cuisinier Works</h2>
+            <div class="row mt-5 align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="ios-card p-4">
+                        <div class="d-flex mb-4">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center step-circle">
+                                <h4 class="mb-0">1</h4>
+                            </div>
+                            <div class="ms-3">
+                                <h4 class="fw-bold">Add Your Ingredients</h4>
+                                <p>Enter what you have available in your kitchen.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center step-circle">
+                                <h4 class="mb-0">2</h4>
+                            </div>
+                            <div class="ms-3">
+                                <h4 class="fw-bold">Discover Recipes</h4>
+                                <p>Browse through personalized recipe suggestions.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center step-circle">
+                                <h4 class="mb-0">3</h4>
+                            </div>
+                            <div class="ms-3">
+                                <h4 class="fw-bold">Cook & Enjoy</h4>
+                                <p>Follow step-by-step instructions to create delicious meals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1514986888952-8cd320577b68?ixlib=rb-4.0.3" class="img-fluid rounded-3 shadow" alt="Cooking Process">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Section -->
+    <section id="app-section" class="py-5">
+        <div class="container py-5">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="section-title mb-0">What's in Your Kitchen?</h2>
+                <button class="btn btn-ios-outline" id="clear-ingredients">Clear All</button>
+            </div>
+            
+            <div class="ios-card p-4 mb-4">
+                <h4 class="fw-bold mb-3">Add Ingredients</h4>
+                <div class="ingredient-input mb-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-ios" id="ingredient-input" placeholder="Type an ingredient (e.g. chicken, tomatoes, rice)">
+                        <button class="btn btn-ios" type="button" id="add-ingredient">Add</button>
+                    </div>
+                    <div class="suggestions-box mt-1" id="suggestions-box"></div>
+                </div>
+                
+                <div id="ingredients-container" class="d-flex flex-wrap mb-3"></div>
+                
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <span class="badge bg-secondary badge-ios">Chicken</span>
+                    <span class="badge bg-secondary badge-ios">Tomatoes</span>
+                    <span class="badge bg-secondary badge-ios">Rice</span>
+                    <span class="badge bg-secondary badge-ios">Cheese</span>
+                    <span class="badge bg-secondary badge-ios">Eggs</span>
+                    <span class="badge bg-secondary badge-ios">Pasta</span>
+                    <span class="badge bg-secondary badge-ios">Mushrooms</span>
+                    <span class="badge bg-secondary badge-ios">Spinach</span>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <button class="btn btn-ios btn-lg px-5" id="find-recipes">Find Recipes <i class="ms-2 fas fa-utensils"></i></button>
+            </div>
+            
+            <div id="results-section" class="mt-5">
+                <h3 class="section-title mb-4">Recommended Recipes</h3>
+                <div class="row" id="recipes-container"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meal Detail -->
+    <div class="meal-detail position-fixed top-0 start-0 w-100 h-100 py-5" id="meal-detail">
+        <div class="close-detail" onclick="closeMealDetail()">
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-lg-6 h-100 d-flex align-items-center">
+                    <img src="" class="img-fluid rounded-4 shadow" id="detail-image" alt="Meal Detail">
+                </div>
+                <div class="col-lg-6 h-100 overflow-auto py-4">
+                    <h2 class="fw-bold mb-3" id="detail-title"></h2>
+                    <div class="d-flex flex-wrap gap-2 mb-4" id="detail-tags"></div>
+                    <h4 class="fw-bold mb-3">Ingredients</h4>
+                    <ul class="mb-4" id="detail-ingredients"></ul>
+                    <h4 class="fw-bold mb-3">Instructions</h4>
+                    <ol id="detail-instructions"></ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="logo mb-3">Cuisinier</h3>
+                    <p>Your personal cooking assistant that helps you create delicious meals with ingredients you already have at home.</p>
+                    <div class="d-flex mt-4">
+                        <a href="#" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" title="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#features" class="text-white text-decoration-none">Features</a></li>
+                        <li class="mb-2"><a href="#how-it-works" class="text-white text-decoration-none">How It Works</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Recipes</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-4">Categories</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Vegetarian</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Vegan</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Gluten-Free</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Quick Meals</a></li>
+                        <li class="mb-2"><a href="#" class="text-white text-decoration-none">Family Favorites</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="mb-4">Newsletter</h5>
+                    <p>Subscribe to get recipe ideas and cooking tips</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <button class="btn btn-primary" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 custom-footer-hr">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Cuisinier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content ios-card border-0">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Login to Cuisinier</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" title="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control form-control-ios" required placeholder="Enter your email" title="Email">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control form-control-ios" required title="Password" placeholder="Enter your password">
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="remember">
+                                <label class="form-check-label" for="remember">Remember me</label>
+                            </div>
+                            <a href="#" class="text-decoration-none">Forgot password?</a>
+                        </div>
+                        <button type="submit" class="btn btn-ios w-100 mb-3">Login</button>
+                        <div class="text-center">
+                            <p class="mb-0">Don't have an account? <a href="#" class="text-primary text-decoration-none" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content ios-card border-0">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Create an Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" title="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="row mb-3">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label class="form-label">First Name</label>
+                                <input type="text" class="form-control form-control-ios" required title="First Name" placeholder="Enter your first name">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Last Name</label>
+                                <input type="text" class="form-control form-control-ios" required title="Last Name" placeholder="Enter your last name">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control form-control-ios" required title="Email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control form-control-ios" required title="Password" placeholder="Enter your password">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control form-control-ios" required title="Confirm Password" placeholder="Confirm your password">
+                        </div>
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="terms" required>
+                            <label class="form-check-label" for="terms">I agree to the <a href="#" class="text-decoration-none">Terms & Conditions</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-ios w-100">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
