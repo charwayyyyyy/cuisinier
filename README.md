@@ -1,4 +1,5 @@
 # Cuisinier - Your Personal Cooking Assistant (single page website)
+https://thecuisinier.netlify.app/
 
 Cuisinier is a web application designed to help you turn the ingredients you already have in your kitchen into delicious meals. Save time, reduce food waste, and enjoy cooking with personalized recipe recommendations.
 
